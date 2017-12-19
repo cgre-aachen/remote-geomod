@@ -1,12 +1,15 @@
-name: rgeomod
-channels:
-  - conda-forge
 dependencies:
   - python=3.6
   - numpy
-  - gdal
+  - conda-forge::gdal
+  - clinicalgraphics::vtk
   - theano
   - jupyter
   - matplotlib
+  - pandas
+  - seaborn
+  - scikit-image
   - pip:
     - mplstereonet
+    - pymc
+    - gempy

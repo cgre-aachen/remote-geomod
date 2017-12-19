@@ -4,6 +4,7 @@ FROM continuumio/miniconda3
 RUN conda install jupyter numpy matplotlib pandas seaborn theano scikit-image
 # install special (working) build of vtk 7 for py3
 RUN conda install -c clinicalgraphics vtk
+# specific version of gdal
 RUN conda install -c conda-forge gdal
 # steoreonet plots and gempy via pip
 RUN pip install pymc mplstereonet gempy
