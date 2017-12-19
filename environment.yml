@@ -1,4 +1,4 @@
-name: googlepicks
+name: rgeomod
 channels:
   - conda-forge
 dependencies:
