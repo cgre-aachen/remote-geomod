@@ -1,0 +1,15 @@
+MetaData Begin
+	Name	= dome_51_3_utm.ers
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build eb2f389b1e6c+ "
+	dome_51_3_utm Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= dome_51_3_utm
+		Bands	= 1
+		Projection	= "NUTM40"
+		Datum	= "WGS84"
+		Units	= "none"
+	dome_51_3_utm End
+MetaData End

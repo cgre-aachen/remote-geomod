@@ -1,0 +1,63 @@
+MetaData Begin
+	Name	= DTM.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build eb2f389b1e6c+ "
+	quad_dome_51_3_utm Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= dome_51_3_utm
+		Units	= "none"
+	quad_dome_51_3_utm End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= "MODEL"
+		Description	= "no description"
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= DTM
+		Projection	= "NUTM40"
+		Datum	= "WGS84"
+		GridExtents = {
+			            340
+			            272
+			              1
+}
+		Origin = {
+			  612012.000000
+			 2472010.000000
+			              0
+}
+		Spacing = {
+			      29.458166
+			      29.458166
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			dome_51_3_utm Begin
+				Resource	= DTM.igmesh/dome_51_3_utm.ers
+				Name	= dome_51_3_utm
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= dome_51_3_utm
+				NumElem	= 92480
+			dome_51_3_utm End
+		FieldData End
+	MeshGrid End
+MetaData End
