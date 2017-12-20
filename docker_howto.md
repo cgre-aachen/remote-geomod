@@ -23,3 +23,8 @@ working, accessible Jupyter Notebook run the following:
     $ jupyter notebook --ip='*' --port=8888 --no-browser --allow-root
     
 and use the provided token-link to access the Notebook server inside your browser.
+
+## Handling volumes
+
+    $ docker volume create my-vol
+    
