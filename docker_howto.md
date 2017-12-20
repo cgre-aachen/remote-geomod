@@ -14,7 +14,7 @@ To get a list of docker images on your system:
 
 This will provide you with the image-id you need to run the docker image with the following command:
 
-    $ docker run -i -t -p 8888:8888 <image-id>
+    $ docker run -it -v \path\to\data:\app\data -p 8888:8888 <image-id>
     
 which runs the image with an interactive terminal and port forwarding for Jupyter Notebooks. The image will run inside 
 the /app folder, where the whole repository is copied (this can all be modified in the Dockerfile). To now run a 
@@ -26,5 +26,3 @@ and use the provided token-link to access the Notebook server inside your browse
 
 ## Handling volumes
 
-    $ docker volume create my-vol
-    
