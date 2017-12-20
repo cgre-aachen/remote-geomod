@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>jeb_mad_contacts.kml</name>
+	<open>1</open>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7faaaa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fffff</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7faaaa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fffaa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aaaa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin7</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff3afeca</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7faa00</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin03">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin7</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aaaa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff2fd1a9</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin02">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff00aa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin6">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fffff</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7faa00</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fffaa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff2fd1a9</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin02">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffffaa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff3afeca</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffffaa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin02</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin7">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fffff</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin7">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fffff</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff00aa</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin7">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin6">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>contacts</name>
+		<Folder>
+			<name>naith_formation</name>
+			<Placemark>
+				<name>path1</name>
+				<styleUrl>#msn_ylw-pushpin</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.11756387583854,22.36764294619722,0 58.12057767512164,22.36704374874253,0 58.1232580684638,22.3654620342111,0 58.12713660524187,22.37038683361399,0 58.13642717090703,22.36889121999877,0 58.14281804788332,22.37453054131573,0 58.14630648090031,22.37457146852158,0 58.14921728847462,22.3731340818381,0 58.15293946241753,22.38088862461797,0 58.15644965727565,22.38130139112047,0 58.15952337723431,22.38080034717516,0 58.1574934764791,22.38612350116916,0 58.15804104308062,22.38820818522784,0 58.157260209569,22.3897356619744,0 58.15757971318146,22.39057446353194,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path_2</name>
+				<styleUrl>#msn_ylw-pushpin03</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.14558618534559,22.41261854085805,0 58.14509129669852,22.4125498640945,0 58.14476349856581,22.41238299109771,0 58.14443843887162,22.41238536138937,0 58.14370334124216,22.41206343217195,0 58.14340207732299,22.41189002280154,0 58.14295885290319,22.41177987931268,0 58.14216445182538,22.41133990351302,0 58.14178749771853,22.41110733582703,0 58.14134297373267,22.41086028063693,0 58.14100882587533,22.41092766295182,0 58.14078359988349,22.41095067533236,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Natih</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin03</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.13336142082867,22.36945352647412,0 58.14295900887667,22.37407401329125,0 58.15170328024372,22.37783899064542,0 58.15757487985102,22.38141262180377,0 58.15770034498463,22.38798901472756,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Natih_2</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin03</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.1090942590102,22.37255829467459,0 58.11086587710259,22.38234604228681,0 58.11515551701589,22.39151324687955,0 58.12274704510152,22.3988522426191,0 58.12635721211039,22.40406609241526,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path_7</name>
+				<LookAt>
+					<longitude>58.11923842696605</longitude>
+					<latitude>22.38360935347267</latitude>
+					<altitude>0</altitude>
+					<heading>-56.85864875163382</heading>
+					<tilt>45.64526655363432</tilt>
+					<range>2415.941802949085</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin03</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.10669136145915,22.37075707766936,0 58.10889618945277,22.37368802167851,0 58.10842240294584,22.37647112604024,0 58.10844864484006,22.37817427195446,0 58.10962064503899,22.38063380644303,0 58.11030621894098,22.38265932767685,0 58.11060885644042,22.38391572945726,0 58.11180418541068,22.3845301840464,0 58.11281044612858,22.38650994252679,0 58.11364563584174,22.3874839410862,0 58.11460426843941,22.38989320806819,0 58.11464822155676,22.39016944662501,0 58.11485182830713,22.39074228832778,0 58.11511516912889,22.3912053173179,0 58.11531330576272,22.3925190096261,0 58.11574460607978,22.39320997035474,0 58.11622660553827,22.39349332456181,0 58.11724343237955,22.39353590307892,0 58.11780154781256,22.39356731325354,0 58.11826159872037,22.39392970824251,0 58.1188940390069,22.39450567505656,0 58.12031131673978,22.39490104802242,0 58.12032048581205,22.39490558511504,0 58.12040519172635,22.39550740127701,0 58.11999666219739,22.39591916966498,0 58.11974634919098,22.39669868774395,0 58.11947415908184,22.39726418801156,0 58.11943403514482,22.39794848949943,0 58.11929740905158,22.39870166475244,0 58.12134642225783,22.39878404114269,0 58.12265323393434,22.39894540866765,0 58.12276334564243,22.39912366317335,0 58.12281465460059,22.39923753322412,0 58.1229884325502,22.39981123369337,0 58.12271981541768,22.40059442913201,0 58.12270531786355,22.4006925069742,0 58.12239616087536,22.40158290832056,0 58.1224003190244,22.40168712624216,0 58.12236554309363,22.40180277824082,0 58.12236825487985,22.40186998709054,0 58.12229799146893,22.40249424724371,0 58.12274900920653,22.4028349656689,0 58.12570911015249,22.40331832856212,0 58.12594019922756,22.4045946416268,0 58.12595198588578,22.40467130881111,0 58.12575259957227,22.40698261908119,0 58.12599689026865,22.40872027304367,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path_9</name>
+				<styleUrl>#msn_ylw-pushpin03</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.16054350284827,22.41349504608694,0 58.16215246369386,22.41134188330633,0 58.16327497003707,22.40953417775467,0 58.16408671639486,22.40771976766555,0 58.16453108063338,22.40547244867521,0 58.16487799208274,22.40333594399047,0 58.16513131267656,22.40164893002017,0 58.16534370518788,22.40091217712133,0 58.16691632501375,22.3997660185712,0 58.16803896432656,22.39879444910749,0 58.16947180768762,22.39706913028179,0 58.17131584109839,22.39488901184351,0 58.17255171980273,22.39273344989353,0 58.17334915417025,22.39013405157429,0 58.17387021757121,22.3862613993214,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>nahr_umr_formation</name>
+			<Placemark>
+				<name>path1</name>
+				<styleUrl>#msn_ylw-pushpin4</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.1118553788499,22.37367080251178,0 58.11070126604555,22.37593372504836,0 58.11216710777383,22.38121953205418,0 58.11275756592654,22.3837649787067,0 58.11466080875845,22.38675578926573,0 58.11575695345223,22.3880888747349,0 58.11606458698318,22.38997383592082,0 58.11644986029008,22.39169126095882,0 58.12070313886341,22.39327503867398,0 58.12207308333448,22.39442810980119,0 58.12268346657419,22.39601653094578,0 58.12341994980623,22.39731705184138,0 58.12451670753415,22.39796592715602,0 58.1254608590264,22.40069200200959,0 58.12761962313421,22.40259242780213,0 58.12761315888949,22.40264111030332,0 58.1278428472005,22.40581111674628,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path2</name>
+				<styleUrl>#msn_ylw-pushpin4</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.15867938267525,22.41207632093925,0 58.16084875536897,22.408930909559,0 58.16189811966854,22.40389562084803,0 58.16319711836016,22.40030690033775,0 58.16552775591165,22.39839387519221,0 58.16785717963452,22.39541554501992,0 58.16803686048658,22.39531433879406,0 58.17070346430272,22.39189529145811,0 58.17122730469262,22.3893963966673,0 58.17119945913272,22.38706315788652,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path3</name>
+				<styleUrl>#msn_ylw-pushpin4</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.11824932753331,22.36862539001308,0 58.1215530707028,22.36794395232961,0 58.12356162627997,22.37036485568903,0 58.12719420737545,22.37335452798889,0 58.12789937470954,22.37284929680134,0 58.12728627176282,22.37183335389993,0 58.13303776843994,22.37131878539186,0 58.13547430344919,22.37041112269785,0 58.1433946836472,22.37618252951133,0 58.14819487186521,22.37544907756985,0 58.1488568248873,22.37887321006805,0 58.15082243692832,22.38037647245312,0 58.15082285511704,22.38043464957303,0 58.15223110780968,22.38218171758244,0 58.15576798305342,22.38301907418682,0 58.1559433112545,22.38586120811859,0 58.15603996133198,22.3893770994707,0 58.15632579748585,22.39046237499673,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>shuaiba_formation</name>
+			<Placemark>
+				<name>path1</name>
+				<styleUrl>#msn_ylw-pushpin6</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.11284639396846,22.37408264827432,0 58.11342446083158,22.37538354253774,0 58.11483565954168,22.37766414444262,0 58.11586997981038,22.37985470046333,0 58.11678168415466,22.38207980531776,0 58.1183935072124,22.38338826162032,0 58.11928219590578,22.38484423523747,0 58.12081714661345,22.38681374657586,0 58.12241806757346,22.38771551183196,0 58.12292039414817,22.38862888839252,0 58.12319304863545,22.38960151939359,0 58.1241149804588,22.3906446889084,0 58.12614863469078,22.39198085058245,0 58.12748239406702,22.39303691973012,0 58.12848935538931,22.39414079941299,0 58.12924266727763,22.39556989050493,0 58.12992362565194,22.39679187679926,0 58.13056437802746,22.39799267990871,0 58.13186069146453,22.4003888999078,0 58.13303026188052,22.40162863203389,0 58.13383591705195,22.40180709105626,0 58.13431464321221,22.40223463206086,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path2</name>
+				<styleUrl>#msn_ylw-pushpin6</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.15843254695732,22.41144486101063,0 58.15911895723796,22.40888027306191,0 58.15921304530983,22.40875769019938,0 58.15865153875964,22.40539898035601,0 58.15783221869616,22.40216940838564,0 58.15818877749243,22.40121873183175,0 58.1576528592283,22.39964065873398,0 58.15801714468093,22.39679402172696,0 58.15810957098867,22.39679240338628,0 58.16184459188771,22.39611414460534,0 58.16484080315447,22.39356955142947,0 58.16696466233404,22.39043557962643,0 58.1683681865553,22.38912657101776,0 58.16842940121931,22.38755484211194,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>kharaib_formation</name>
+			<Placemark>
+				<name>path1</name>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.15821248933789,22.4110560804703,0 58.15877597427689,22.40816969323913,0 58.15820419925599,22.40517612125779,0 58.15761522905665,22.40246383084454,0 58.15627726700967,22.4003484333236,0 58.15583625733017,22.39765311090499,0 58.1562484697327,22.39581217083732,0 58.1596975098189,22.39496745876953,0 58.16482616232008,22.39281260480126,0 58.16715718222059,22.3892313535333,0 58.16814715571205,22.38770250689826,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>lakhwair_formation</name>
+			<Placemark>
+				<name>path1</name>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.15280243921169,22.39526081684943,0 58.15409478521914,22.39397513020399,0 58.15687281186818,22.39332981545883,0 58.1585241529902,22.39322686659062,0 58.15986759765401,22.39228145601814,0 58.16229673788284,22.39102984406372,0 58.16428761031435,22.38954990860857,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path2</name>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.14318297069105,22.39977199186892,0 58.14309425376157,22.398249647454,0 58.14355526576722,22.39625538863723,0 58.14457882855272,22.39508817501534,0 58.14598107791927,22.39415847099202,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>habshan_formation</name>
+			<Placemark>
+				<name>path1</name>
+				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.14272085078751,22.39963249891067,0 58.14294006104583,22.39660507374286,0 58.14417592891324,22.39479444805146,0 58.14625050404256,22.39319224116605,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path2</name>
+				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.15249634071098,22.39474814205282,0 58.15414666251334,22.39306903703133,0 58.1542700389744,22.39306983130517,0 58.15562852357682,22.39298993132768,0 58.15783415027619,22.39270194148289,0 58.15833355165946,22.39233762338472,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>salil_formation</name>
+			<Placemark>
+				<name>path1</name>
+				<styleUrl>#msn_ylw-pushpin3</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.15013142882913,22.39375908738825,0 58.1508384765163,22.39316591531703,0 58.15189618036634,22.39279486096097,0 58.15314640199848,22.3923042142103,0 58.15528221345386,22.39212708423618,0 58.15611585410925,22.3919464294978,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path2</name>
+				<styleUrl>#msn_ylw-pushpin3</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.14150959079776,22.39610138177805,0 58.1423319601578,22.39456967610995,0 58.14560745319214,22.39170747233057,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>rayda_formation</name>
+			<Placemark>
+				<name>path1</name>
+				<styleUrl>#msn_ylw-pushpin7</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.14845257061501,22.39285449319063,0 58.14978768163381,22.39296843895932,0 58.15107128062291,22.39290957405966,0 58.15225724112859,22.39229617226671,0 58.1531300507132,22.39179782818825,0 58.15459993842062,22.39159049374455,0 58.15646882886529,22.39180556960153,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>path2</name>
+				<styleUrl>#msn_ylw-pushpin7</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.14114555900017,22.39610748960389,0 58.14091535352855,22.39521223499305,0 58.14236264321978,22.39395055654576,0 58.14239193947893,22.3939234991706,0 58.14447232730531,22.39251248097311,0 58.14456997642502,22.39194903218004,0 58.14532874296833,22.39153354311011,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>sahtan_group</name>
+			<Placemark>
+				<name>Sahtan_Group</name>
+				<description>Contact</description>
+				<styleUrl>#msn_ylw-pushpin5</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.14071768879465,22.39588752379053,0 58.14067372017582,22.39574239102342,0 58.14064026394239,22.39544511114702,0 58.14067578528852,22.39503340136432,0 58.14082846296085,22.394708980674,0 58.14104862663931,22.39450729996643,0 58.14129126362158,22.3941362481702,0 58.14153799026806,22.39384446104585,0 58.14184068882981,22.39403613757001,0 58.14230395642801,22.39350563164151,0 58.14304209578335,22.39308341367269,0 58.14358975351526,22.39282331979782,0 58.14398613293494,22.39255585454547,0 58.14432243788253,22.39238367454591,0 58.14433875655023,22.39180902775518,0 58.1450783185657,22.39155190231809,0 58.14532674768653,22.39136414356635,0 58.14409657241581,22.39098083473484,0 58.14373137302722,22.391183543232,0 58.14380769752455,22.39189774401029,0 58.14293076196389,22.39253223397492,0 58.14233562764198,22.392624786764,0 58.14198309293066,22.39267375065612,0 58.14152367673663,22.39288406152698,0 58.14115004891072,22.39319053348378,0 58.14092752542406,22.39358271615846,0 58.14060857296519,22.39428501642975,0 58.14041459324387,22.3947894657051,0 58.14025772641144,22.39523890949367,0 58.14034813581066,22.39575843832829,0 58.14060581127046,22.39584801202589,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>mahil_formation</name>
+			<Placemark>
+				<name>Mahil_Formation</name>
+				<description>Contact</description>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						58.13862630969653,22.39627253487282,0 58.13906030156898,22.39597362309286,0 58.13957726602973,22.39592613647995,0 58.13999357645373,22.39592395731746,0 58.14036000708492,22.39581531355974,0 58.14023127032888,22.39537023794715,0 58.14030424883883,22.39487072204726,0 58.14036256705775,22.39483499422259,0 58.14059439406374,22.3943141432564,0 58.14088114049584,22.39365371947599,0 58.14114002079463,22.39318993892172,0 58.14143923668604,22.39292441356777,0 58.14197193830497,22.39266444258405,0 58.14232519820527,22.39263340999219,0 58.14103187634542,22.39218010999849,0 58.14049293205871,22.39195480200819,0 58.13996742918591,22.39201154570347,0 58.13942637008013,22.39199202831055,0 58.13900570378505,22.39211770579902,0 58.13856537404472,22.39227199316145,0 58.13798854162957,22.39208025876123,0 58.13765587688675,22.39185071075304,0 58.137219853817,22.39162326911869,0 58.13671478686976,22.39137649153306,0 58.13639060468358,22.39140318822153,0 58.13602270142474,22.39128234654116,0 58.1357556591676,22.39111766977092,0 58.13496287449801,22.39119410039016,0 58.1340366277974,22.39114967726513,0 58.13407930966409,22.39116375366911,0 58.1347829171368,22.39173807023044,0 58.13517914178049,22.39198799724112,0 58.13546329618036,22.39246328360179,0 58.13589186345648,22.3928869997842,0 58.13616469873859,22.39318836218264,0 58.13661522928283,22.39320224373992,0 58.13700198101677,22.39317708536003,0 58.1373769748099,22.39350926330972,0 58.13768891758258,22.39377630083173,0 58.13773135115407,22.3941616436809,0 58.13746443060057,22.3947602463356,0 58.13776555295002,22.39532331375228,0 58.13823387985304,22.395734182564,0 58.13845004718252,22.39617301211278,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+	</Folder>
+	<GroundOverlay>
+		<name>Claringbould_map</name>
+		<visibility>0</visibility>
+		<color>b8ffffff</color>
+		<Icon>
+			<href>C:/Users/Danielle Torres/Documents/RWTH Aachen/aices_hiwi/KartenUndProfile2017/Claringbould_map.png</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>22.42002409739639</north>
+			<south>22.35861134924421</south>
+			<east>58.18178107305337</east>
+			<west>58.09570454491093</west>
+		</LatLonBox>
+	</GroundOverlay>
+</Document>
+</kml>
