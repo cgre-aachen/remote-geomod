@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>03_shuaiba_form_contacts.kml</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff3afeca</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff3afeca</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>3_shuaiba_formation</name>
+		<open>1</open>
+		<Placemark>
+			<name>path1</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					58.11284639396846,22.37408264827432,0 58.11342446083158,22.37538354253774,0 58.11483565954168,22.37766414444262,0 58.11586997981038,22.37985470046333,0 58.11678168415466,22.38207980531776,0 58.1183935072124,22.38338826162032,0 58.12081714661345,22.38681374657586,0 58.12241806757346,22.38771551183196,0 58.12319304863545,22.38960151939359,0 58.1241149804588,22.3906446889084,0 58.12748239406702,22.39303691973012,0 58.12924266727763,22.39556989050493,0 58.13056437802746,22.39799267990871,0 58.13186069146453,22.4003888999078,0 58.13285926385831,22.40144791614173,0 58.13431464321221,22.40223463206086,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>path2</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					58.15843254695732,22.41144486101063,0 58.15911895723796,22.40888027306191,0 58.15921304530983,22.40875769019938,0 58.15865153875964,22.40539898035601,0 58.15783221869616,22.40216940838564,0 58.15818877749243,22.40121873183175,0 58.1576528592283,22.39964065873398,0 58.15749554052384,22.39722792223886,0 58.15810957098867,22.39679240338628,0 58.16113991159176,22.39677300687595,0 58.16578028077509,22.39235505163676,0 58.16696466233404,22.39043557962643,0 58.1683681865553,22.38912657101776,0 58.16842940121931,22.38755484211194,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
