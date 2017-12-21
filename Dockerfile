@@ -11,7 +11,7 @@ RUN conda install jupyter numpy matplotlib pandas seaborn theano scikit-image
 # specific version of gdal
 RUN conda install -c conda-forge gdal
 # steoreonet plots and gempy via pip
-RUN pip install mplstereonet # gempy
+RUN pip install mplstereonet
 
 # make /app the working folder (we can change this)
 WORKDIR /app
