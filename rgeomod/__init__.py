@@ -3,6 +3,7 @@
 """
 
 import pandas as pn
+import os
 from .kml_to_plane import *
 from .struct_geo import *
 
@@ -112,3 +113,116 @@ def dips_to_gempy_fol(dips, dip_dirs, xs, ys, zs, formation, series="Default ser
     foliations["series"] = series
 
     return foliations
+
+
+def read_kml_files(folder_path, verbose=True):
+    """Reads in all .kml files from given folder, creating a KmlPoints instance for each
+    file found.
+    Filename convention:
+        '01_formationname_dips.kml' for dip picks.
+        '04_formationname_interf.kml' for
+
+    Args:
+        folder_path (str): Relative path to the folder containing the picked points as .kml files (Google Earth).
+        verbose (bool): Toggles verbosity.
+
+    Returns:
+        (list):
+        (list):
+        (np.array, boolean):
+    """
+
+    ks = []
+    ks_names = []
+    ks_bool = []
+
+    for i, fn in enumerate(os.listdir(folder_path)):
+        if ".kml" in fn:
+            ks.append(kml_to_plane.KmlPoints(filename=folder_path + fn, debug=verbose))
+            if verbose:
+                print(fn)
+
+
+            # auto check if some set contains less than 3 points and throw them out
+            check_point_sets(ks[-1])
+            if verbose:
+                print("\n")
+            # append names
+            ks_names.append(fn[:-4])
+            if "dips" in fn or "Dips" in fn:
+                ks_bool.append(True)
+            else:
+                ks_bool.append(False)
+
+    return ks, ks_names, np.array(ks_bool).astype(bool)
+
+
+def fetch_z_from_dtm(ks, dtm_path):
+    for k in ks:
+        for ps in k.point_sets:
+            try:
+                ps.get_z_values_from_geotiff(dtm_path)
+            except IndexError:
+                print("Point outside geotiff, drop")
+                k.point_sets.remove(ps)
+                continue
+
+            # convert LatLon coordinates to UTM
+            ps.latlong_to_utm()
+            # Fit plane to point set
+            ps.plane_fit()
+
+
+def calc_dips_from_points(ks, ks_bool):
+    dips = []
+    dip_dirs = []
+    dip_xs = []
+    dip_ys = []
+    dip_zs = []
+
+    for k in np.array(ks)[ks_bool]:
+        for ps in k.point_sets:
+            # determine dip angle from normal vector of plane
+            dips.append(dip(ps.normal))
+            # get dip direction from normal vector
+            dip_dirs.append(dip_dir(ps.normal))
+            # get centroid coordinates
+            dip_xs.append(ps.ctr.x)
+            dip_ys.append(ps.ctr.y)
+            dip_zs.append(ps.ctr.z)
+
+    return dips, dip_dirs, dip_xs, dip_ys, dip_zs
+
+
+def convert_to_df(ks, ks_names, ks_bool):
+    """
+
+    Args:
+        ks:
+        ks_names:
+        ks_bool:
+
+    Returns:
+
+    """
+    # interfaces
+    # ----------
+    ks_coords = []
+    for k in ks:
+        ks_coords.append(extract_xyz(k))
+
+    ks_coords_interf = []
+    ks_names_interf = []
+    for i, k in enumerate(ks_coords):
+        if not ks_bool[i]:
+            ks_coords_interf.append(k)
+            ks_names_interf.append(ks_names[i])
+
+    interfaces = points_to_gempy_interf(ks_coords_interf, ks_names_interf)
+
+    # foliations
+    # ----------
+    dips, dip_dirs, dip_xs, dip_ys, dip_zs = calc_dips_from_points(ks, ks_bool)
+    foliations = dips_to_gempy_fol(dips, dip_dirs, dip_xs, dip_ys, dip_zs, ks_names[0])
+
+    return interfaces, foliations
