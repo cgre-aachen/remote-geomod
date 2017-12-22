@@ -17,7 +17,9 @@ RUN pip install mplstereonet
 WORKDIR /app
 # copy files from current folder into app to have it all availabe in the image
 ADD . /app
-RUN git clone https://github.com/cgre-aachen/gempy.git
+
+# clone gempy's rgeomod branch
+RUN git clone -b rgeomod --single-branch https://github.com/cgre-aachen/gempy.git
 
 # command to run
 # docker run -i -t -p 8888:8888 <IMAGE>
