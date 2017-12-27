@@ -11,9 +11,23 @@ in GemPy.
 
 ### Dependencies
 
+* `python 3`
+* `gdal` for handling coordinate systems and geotiffs.
+* `jupyter` for interactive notebooks.
+* `mplstereonet` for plotting structural geological measurements.
+* `gempy` for open-source implicit structural geological modeling.
+
 ## Getting started
 
+You can directly clone the repository by calling
+
+    git clone https://github.com/cgre-aachen/remote-geomod.git
+
 ### Docker
+
+#### (a) Pull Docker image from DockerHub
+
+#### (b) Building the Docker image yourself
 
 ## References
 

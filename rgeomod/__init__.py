@@ -6,6 +6,8 @@ import pandas as pn
 import os
 from .kml_to_plane import *
 from .struct_geo import *
+from tqdm import tqdm
+from time import sleep
 
 # TODO: we should rework the storage of xyz coordinates from single .x, .y, .z class-variables to np.ndarray
 
@@ -142,7 +144,6 @@ def read_kml_files(folder_path, verbose=True):
             if verbose:
                 print(fn)
 
-
             # auto check if some set contains less than 3 points and throw them out
             check_point_sets(ks[-1])
             if verbose:
@@ -157,20 +158,33 @@ def read_kml_files(folder_path, verbose=True):
     return ks, ks_names, np.array(ks_bool).astype(bool)
 
 
-def fetch_z_from_dtm(ks, dtm_path):
-    for k in ks:
+def get_elevation_from_dtm(ks, dtm_path, verbose=True):
+    for k in tqdm(ks, desc="Extracting elevation data"):
+        sleep(0.3)
         for ps in k.point_sets:
             try:
                 ps.get_z_values_from_geotiff(dtm_path)
             except IndexError:
-                print("Point outside geotiff, drop")
+                if verbose:
+                    print("Point outside geotiff, drop")
                 k.point_sets.remove(ps)
                 continue
 
+    if verbose:
+        print("Elevation data successfully extracted from DTM.")
+
+
+def fit_planes_to_points(ks, verbose=True):
+    for k in tqdm(ks, desc="Fitting planes to point sets"):
+        sleep(0.3)
+        for ps in k.point_sets:
             # convert LatLon coordinates to UTM
             ps.latlong_to_utm()
             # Fit plane to point set
             ps.plane_fit()
+
+    if verbose:
+        print("Planes successfully fit to point sets.")
 
 
 def calc_dips_from_points(ks, ks_bool):
