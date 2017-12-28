@@ -1,4 +1,3 @@
-name: rgeomod
 dependencies:
   - python=3.6
   - numpy
@@ -6,10 +5,12 @@ dependencies:
   - clinicalgraphics::vtk
   - theano
   - jupyter
+  - nb_conda
   - matplotlib
   - pandas
   - seaborn
   - scikit-image
+  - tqdm
   - pip:
     - mplstereonet
     - gempy
