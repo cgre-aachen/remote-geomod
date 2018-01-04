@@ -60,7 +60,7 @@ def extract_xyz(k):
     return np.array([x, y, z])
 
 
-def points_to_gempy_interf(ks_coords, formations, series="Default series", debug=False):
+def points_to_gempy_interf(ks_coords, formations, filenames, series="Default series", debug=False):
     """Converts KmlPoints coordinates into GemPy interfaces dataframe.
 
     Args:
@@ -70,12 +70,12 @@ def points_to_gempy_interf(ks_coords, formations, series="Default series", debug
         debug (bool, optional): Toggles verbosity.
 
     Returns:
-        GemPy interfaces dataframe with columns ['X', 'Y', 'Z', 'formation', 'series'].
+        GemPy interfaces dataframe with columns ['X', 'Y', 'Z', 'formation', 'series', "formation number"].
     """
-    interfaces = pn.DataFrame(columns=['X', 'Y', 'Z', 'formation', 'series'])
+    interfaces = pn.DataFrame(columns=['X', 'Y', 'Z', 'formation', 'series', "formation number"])
 
     for i, k in enumerate(ks_coords):
-        temp = pn.DataFrame(columns=['X', 'Y', 'Z', 'formation', 'series'])
+        temp = pn.DataFrame(columns=['X', 'Y', 'Z', 'formation', 'series', "formation number"])
         if debug:
             print(i)
 
@@ -84,13 +84,14 @@ def points_to_gempy_interf(ks_coords, formations, series="Default series", debug
         temp["Z"] = k[2]
         temp["formation"] = formations[i]
         temp["series"] = series
+        temp["formation number"] = int(filenames[i].split("_")[0])
 
         interfaces = interfaces.append(temp, ignore_index=True)
 
     return interfaces
 
 
-def dips_to_gempy_fol(dips, dip_dirs, xs, ys, zs, formation, series="Default series"):
+def dips_to_gempy_fol(dips, dip_dirs, xs, ys, zs, formation, formation_number, series="Default series"):
     """
 
     Args:
@@ -115,6 +116,7 @@ def dips_to_gempy_fol(dips, dip_dirs, xs, ys, zs, formation, series="Default ser
     foliations["polarity"] = 1
     foliations["formation"] = formation
     foliations["series"] = series
+    foliations["formation number"] = formation_number
 
     return foliations
 
@@ -139,12 +141,15 @@ def read_kml_files(folder_path, verbose=True):
     ks = []
     ks_names = []
     ks_bool = []
+    filenames = []
 
     for i, fn in enumerate(os.listdir(folder_path)):
         if ".kml" in fn:
             ks.append(kml_to_plane.KmlPoints(filename=folder_path + fn, debug=verbose))
             if verbose:
                 print(fn)
+
+            filenames.append(fn)
 
             # auto check if some set contains less than 3 points and throw them out
             check_point_sets(ks[-1])
@@ -159,7 +164,7 @@ def read_kml_files(folder_path, verbose=True):
             else:
                 ks_bool.append(False)
 
-    return ks, ks_names, np.array(ks_bool).astype(bool)
+    return ks, ks_names, np.array(ks_bool).astype(bool), filenames
 
 
 def get_elevation_from_dtm(ks, dtm_path, verbose=True):
@@ -212,7 +217,7 @@ def calc_dips_from_points(ks, ks_bool):
     return dips, dip_dirs, dip_xs, dip_ys, dip_zs
 
 
-def convert_to_df(ks, ks_names, ks_bool):
+def convert_to_df(ks, ks_names, filenames, ks_bool):
     """
 
     Args:
@@ -231,17 +236,22 @@ def convert_to_df(ks, ks_names, ks_bool):
 
     ks_coords_interf = []
     ks_names_interf = []
+    ks_filenames = []
+
     for i, k in enumerate(ks_coords):
         if not ks_bool[i]:
             ks_coords_interf.append(k)
             ks_names_interf.append(ks_names[i])
+            ks_filenames.append(filenames[i])
 
-    interfaces = points_to_gempy_interf(ks_coords_interf, ks_names_interf)
+
+    interfaces = points_to_gempy_interf(ks_coords_interf, ks_names_interf, ks_filenames)
 
     # foliations
     # ----------
     dips, dip_dirs, dip_xs, dip_ys, dip_zs = calc_dips_from_points(ks, ks_bool)
-    foliations = dips_to_gempy_fol(dips, dip_dirs, dip_xs, dip_ys, dip_zs, ks_names[0])
+    foliations = dips_to_gempy_fol(dips, dip_dirs, dip_xs, dip_ys, dip_zs, ks_names[0], 1)
+    # TODO: flexible formation number assignment for foliations
 
     return interfaces, foliations
 
