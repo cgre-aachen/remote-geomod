@@ -8,6 +8,8 @@ from .kml_to_plane import *
 from .struct_geo import *
 from tqdm import tqdm
 from time import sleep
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
 
 # TODO: we should rework the storage of xyz coordinates from single .x, .y, .z class-variables to np.ndarray
 
@@ -148,9 +150,11 @@ def read_kml_files(folder_path, verbose=True):
             check_point_sets(ks[-1])
             if verbose:
                 print("\n")
-            # append names
-            ks_names.append(fn[:-4])
-            if "dips" in fn or "Dips" in fn:
+
+
+            ks_names.append(fn.split("_")[1])  # append formation name
+
+            if "dips" in fn or "Dips" in fn or "foliation" in fn:
                 ks_bool.append(True)
             else:
                 ks_bool.append(False)
@@ -240,3 +244,33 @@ def convert_to_df(ks, ks_names, ks_bool):
     foliations = dips_to_gempy_fol(dips, dip_dirs, dip_xs, dip_ys, dip_zs, ks_names[0])
 
     return interfaces, foliations
+
+
+def calculate_gradient(foliations):
+    """
+    Calculate the gradient vector of module 1 given dip and azimuth to be able to plot the foliations
+
+    Attributes:
+        foliations: extra columns with components xyz of the unity vector.
+    """
+
+    foliations['G_x'] = np.sin(np.deg2rad(foliations["dip"].astype('float'))) * \
+                             np.sin(np.deg2rad(foliations["azimuth"].astype('float'))) * \
+                             foliations["polarity"].astype('float')
+    foliations['G_y'] = np.sin(np.deg2rad(foliations["dip"].astype('float'))) * \
+                             np.cos(np.deg2rad(foliations["azimuth"].astype('float'))) *\
+                             foliations["polarity"].astype('float')
+    foliations['G_z'] = np.cos(np.deg2rad(foliations["dip"].astype('float'))) *\
+                             foliations["polarity"].astype('float')
+
+
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        FancyArrowPatch.__init__(self, (0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+
+    def draw(self, renderer):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, renderer.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        FancyArrowPatch.draw(self, renderer)

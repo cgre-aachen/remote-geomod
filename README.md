@@ -1,5 +1,7 @@
 # remote-geomod
 
+![Python 3](https://img.shields.io/badge/Python-3-blue.svg)
+
 > Coupling remote geological mapping in Google Earth with direct 3D geological modeling 
 in GemPy.
 
@@ -9,25 +11,95 @@ in GemPy.
 
 ## Installation
 
-### Dependencies
+Next to remote-geomod, you will require two additional major software components: (1) 
+[Google Earth Pro](https://www.google.com/earth/desktop/) for remote mapping and (2) a Python 
+distribution with specific software libraries. The software libraries remote-geomod relies on can be difficult to
+install on certain systems. Because of this we provide you with two possible installation paths that will take care
+of installing the dependecies:
 
-* `python 3`
-* `gdal` for handling coordinate systems and geotiffs.
-* `jupyter` for interactive notebooks.
-* `mplstereonet` for plotting structural geological measurements.
-* `gempy` for open-source implicit structural geological modeling.
+ * Using the open-source **Anaconda** Python distribution which allows convenient, automated installation of the 
+ dependencies. 
+ * A local installation inside of a **Docker** environment, for wich we can directly ship all dependencies insode
+ of a Docker image. We recommend this installation path for users familiar with using Dokcer of if the above one fails.
 
-## Getting started
+### Installation using Anaconda
 
-You can directly clone the repository by calling
-
+As a first step you need to download the Anaconda Python Distribution on your system. Make sure to select the correct 
+Python 3.6 version for your operating system and install it\footnote{A comprehensive user guide with installation 
+instructions can be found on the [Conda Documentation website](https://conda.io/docs/user-guide/install/). The next 
+step is to either download and unpack the remote-geomod repository, or to directly clone it into the current repository
+ of your command-line window:
+ 
     git clone https://github.com/cgre-aachen/remote-geomod.git
 
-### Docker
+Once you have a local copy of the repository on your computer, you have to create a new Conda environment. You can 
+either do this using the Anaconda Navigator or your command line tool. For the former option start the Anaconda 
+Navigator, select ``Environments`` in the navigation bar on the left-hand side, then click ``Import`` at the bottom 
+of the window and browse for the ``environment.yml`` file located in the remote-geomod folder and give the 
+environment the same name. This will create a separate Conda environment and install all necessary dependencies
+ automatically. Once the installation finished, make sure you have selected the newly created environment.
+
+### Dependencies
+
+remote-geomod uses Python 3 and has several dependencies for numerical operations, geographical data operations, 
+geological modeling and visualization. The following dependencies can also be found in the `environment.yml` file:
+
+**Provided via Anaconda:**
+
+````
+  - numpy
+  - conda-forge::gdal
+  - clinicalgraphics::vtk
+  - theano
+  - jupyter
+  - matplotlib
+  - pandas
+  - seaborn
+  - scikit-image
+  - tqdm
+````
+**Provided via PyPi:**
+
+````
+  - mplstereonet
+  - gempy
+````
+
+We also provide precompiled Docker images hosted on Docker Hub with all necessary dependencies to get remote-geomod up
+and running. 
+
+### Installation using Docker
+
+Docker is an operating-system-level-visualization software,
+meaning that we can package a tiny operating system with pre-installed
+software into a Docker image. This Docker image can then be shared
+with and run by others, enabling them to use intricate dependencies
+with just a few commands. For this to work the user needs to have a
+working [Docker](https://www.docker.com/) installation.
 
 #### (a) Pull Docker image from DockerHub
 
-#### (b) Building the Docker image yourself
+The easiest way to get remote-geomod running is by running the pre-compiled Docker image (containing everything you
+need) directly from the cloud service Docker Hub to get a locally running Docker container. Make sure to set your 
+Docker daemon to Linux containers in Docker's context menu.
+
+    docker run -it -p 8888:8888 cgreaachen/rgeomod_complete
+    
+This will automatically pull the Docker image from Docker Hub and run it, opening a command line shell inside of the
+running Docker container. There you have access to the file system inside of the container. Note that this pre-compiled
+Docker image already contains the rgeomod repository. As rgeomod is undergoing active development, we can not 
+guarantee that this Docker image always contains the latest release version.
+
+If you just want the dependencies:
+
+    docker run -it -p 8888:8888 cgreaachen/rgeomod_dependencies
+
+Alternatively, you can also build the Docker image yourself from the Dockerfile provided with the repository by running
+``docker build . -t <image-tag>`` in its root directory. Once the Docker image is built you can look up it's image-id 
+using ``docker images``. Then, instead of using the DockerHub repository name, you can run the Docker image by using
+its id: ``docker run -it -p 888:8888 <image-id>``.
+
+## Getting started
 
 ## References
 
