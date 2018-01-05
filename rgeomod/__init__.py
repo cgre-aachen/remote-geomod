@@ -284,3 +284,31 @@ class Arrow3D(FancyArrowPatch):
         xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, renderer.M)
         self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
         FancyArrowPatch.draw(self, renderer)
+
+
+def export_point(kmlpoints_list, template_fp, placemark_template_fp, filepath, filename):
+    with open(placemark_template_fp) as f:
+        placemark_template = f.readlines()
+
+    for i, kmlp in enumerate(kmlpoints_list):
+        with open(template_fp) as f:
+            template = f.readlines()
+
+        for ps in kmlp.point_sets:
+
+            for p in ps.points:
+                p.utm_to_latlong()
+
+                # write coordinates
+                placemark_template[5 - 1] = "<longitude>" + str(p.x) + "</longitude>\n"
+                placemark_template[6 - 1] = "<latitude>" + str(p.y) + "</latitude>\n"
+                placemark_template[7 - 1] = "<altitude>" + str(p.z) + "</altitude>\n"
+
+                placemark_template[14 - 1] = "<coordinates>" + str(p.x) + "," + str(p.y) + "," + str(
+                    p.z) + "</coordinates>\n"
+
+                # append placemark to template
+                template[-3:-3] = placemark_template
+
+        with open(filepath+str(i)+"_"+filename+".kml", 'w') as file:
+            file.write("".join(template))
