@@ -101,8 +101,12 @@ its id: ``docker run -it -p 888:8888 <image-id>``.
 
 ## Getting started
 
+A good way to get started is to follow the steps in the publication (see below) and to run the jupyter notebooks, supplied with this package.
+
 ## References
+
+Wellmann, F., A. Schaaf and C. von Hagke: "From GoogleEarth to 3-D Geology Problem 2: Seeing below the surface of the Digital Earth". In preparation for "Structural Geology and Tectonics: Problems and Solutions".
 
 ## Contact
 
-Library developed by LuF Computational Geoscience and Reservoir Engineering (CGRE) at RWTH Aachen University.
+This library is developed by LuFG Computational Geoscience and Reservoir Engineering (CGRE) at RWTH Aachen University, Germany.
