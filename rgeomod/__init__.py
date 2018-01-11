@@ -380,3 +380,47 @@ def export_point(kmlpoints_list, template_fp, placemark_template_fp, filepath, f
 
         with open(filepath+str(i)+"_"+filename+".kml", 'w') as file:
             file.write("".join(template))
+
+
+def plot_input_data_3d_scatter(interfaces, foliations):
+    # **********************************************************************
+    fig = plt.figure(figsize=(10, 8))
+    ax = fig.add_subplot(111, projection='3d')
+    # **********************************************************************
+    for fmt in interfaces["formation"].unique():  # loop over all unique formations
+        interf = interfaces[interfaces["formation"] == fmt]  # select only current formation
+        ax.scatter(interf["X"], interf["Y"], interf["Z"], alpha=0.85, s=35,
+                   label=fmt)  # plot points of current formation
+
+    # plot foliation data
+    ax.scatter(foliations["X"], foliations["Y"], foliations["Z"], color="black", alpha=0.85, s=35,
+               label="Foliation data")
+
+    calculate_gradient(foliations)
+
+    # **********************************************************************
+    # The following code will add arrows to indicate the foliation values
+    # **********************************************************************
+
+    # get extent of plot to adjust vectors:
+    ext_x, ext_y, ext_z = np.diff(ax.get_xlim3d()), np.diff(ax.get_ylim3d()), np.diff(ax.get_zlim3d())
+    m = 1000
+
+    # plot and arrow for each foliation value in the DataFrame
+    for i, row in foliations.iterrows():
+        a = Arrow3D([row["X"], row["X"] + row["G_x"] * m],
+                            [row["Y"], row["Y"] + row["G_y"] * m * ext_y / ext_x],
+                            [row["Z"], row["Z"] + row["G_z"] * m * ext_z / ext_x], mutation_scale=20,
+                            lw=1, arrowstyle="-|>", color="k"
+                            )
+        ax.add_artist(a)  # add the arrow artist to the subplot axes
+
+    # **********************************************************************
+    # add plot legend and  labels
+    ax.legend()
+    ax.set_xlabel("X")
+    ax.set_ylabel("Y")
+    ax.set_zlabel("Z")
+    fig.suptitle("GoogleEarth picks");
+    # **********************************************************************
+    return ax
