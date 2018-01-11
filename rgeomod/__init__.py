@@ -257,6 +257,26 @@ def convert_to_df(ks, ks_names, filenames, ks_bool):
     return interfaces, foliations
 
 
+def convert_dtm_to_gempy_grid(raster, dtm):
+    # here are the raster dimensions:
+    # raster.RasterXSize, raster.RasterYSize
+    geoinformation = raster.GetGeoTransform()
+    # get DTM corners:
+    dtm_E_min = geoinformation[0]
+    dtm_E_max = geoinformation[0] + geoinformation[1] * raster.RasterXSize
+    dtm_N_min = geoinformation[3] + geoinformation[5] * raster.RasterYSize
+    dtm_N_max = geoinformation[3]
+    # dtm_E_min, dtm_E_max, dtm_N_min, dtm_N_max
+
+    # define range for x, y - values
+    X_range = np.arange(dtm_E_min, dtm_E_max, geoinformation[1])
+    Y_range = np.arange(dtm_N_min, dtm_N_max, np.abs(geoinformation[5]))
+    XX, YY = np.meshgrid(X_range, Y_range, indexing="ij")
+
+    # Create list of input points for interpolation with gempy:
+    return np.array(list(zip(XX.ravel(), YY.ravel(), dtm[::-1,:].T.ravel())))
+
+
 def export_geotiff(path, geo_map, cmap, geotiff_filepath):
     """
 
