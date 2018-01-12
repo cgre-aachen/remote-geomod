@@ -10,6 +10,7 @@ from tqdm import tqdm
 from time import sleep
 from matplotlib.patches import FancyArrowPatch
 from mpl_toolkits.mplot3d import proj3d
+from osgeo import ogr, osr
 import gdal
 
 # TODO: we should rework the storage of xyz coordinates from single .x, .y, .z class-variables to np.ndarray
@@ -424,3 +425,55 @@ def plot_input_data_3d_scatter(interfaces, foliations):
     fig.suptitle("GoogleEarth picks");
     # **********************************************************************
     return ax
+
+
+def clamp(x):
+    return int(max(0, min(x, 255)))
+
+
+def utm_to_latlong(x, y, zone=40):
+    wgs = osr.SpatialReference()
+    wgs.ImportFromEPSG(4326)
+    if zone == 40:
+        utm = osr.SpatialReference()
+        utm.ImportFromEPSG(32640)
+    else:
+        raise AttributeError("Sorry, zone %d not yet implemented (check EPSG code and include in code!)" % zone)
+
+    ct = osr.CoordinateTransformation(utm, wgs)
+    x, y = ct.TransformPoint(x, y)[:2]
+    return x, y
+
+
+def gempy_export_points_to_kml(fp, geo_data, placemark_template_fp, template_fp, cmap):
+    with open(placemark_template_fp) as f:
+        placemark_template = f.readlines()
+
+    formations = geo_data.get_formations()
+
+    for fmt in formations:  # loop over all formations to create a file for each
+        with open(template_fp) as f:  # start with a new template for each file
+            template = f.readlines()
+
+        f = geo_data.interfaces["formation"] == fmt  # filter
+
+        # set colors
+        rgb_c = np.array(cmap(np.unique(geo_data.interfaces[f]["formation number"]), bytes=True)[0])[:-1]
+        hex_c = "ff{0:02x}{1:02x}{2:02x}".format(clamp(rgb_c[2]), clamp(rgb_c[1]), clamp(rgb_c[0]))
+        template[17 - 1] = "<color>" + hex_c + "</color>\n"
+        template[28 - 1] = "<color>" + hex_c + "</color>\n"
+
+        for i, row in geo_data.interfaces[f].iterrows():
+            x, y = utm_to_latlong(row["X"], row["Y"])
+            placemark_template[3 - 1] = "<longitude>" + str(x) + "</longitude>\n"
+            placemark_template[4 - 1] = "<latitude>" + str(y) + "</latitude>\n"
+            placemark_template[5 - 1] = "<altitude>" + str(row["Z"]) + "</altitude>\n"
+
+            placemark_template[12 - 1] = "<coordinates>" + str(x) + "," + str(y) + "," + str(
+                row["Z"]) + "</coordinates>\n"
+            placemark_template[14 - 1] = "</Placemark>\n"
+            # append placemark to template
+            template[-3:-3] = placemark_template
+
+        with open(fp + fmt + ".kml", 'w') as file:
+            file.write("".join(template))
