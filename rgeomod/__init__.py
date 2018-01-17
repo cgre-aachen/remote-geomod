@@ -477,3 +477,38 @@ def gempy_export_points_to_kml(fp, geo_data, placemark_template_fp, template_fp,
 
         with open(fp + fmt + ".kml", 'w') as file:
             file.write("".join(template))
+
+
+def gempy_export_fol_to_kml(fp, geo_data,
+                            placemark_template_fp,
+                            template_fp):
+
+    with open(placemark_template_fp) as f:
+        placemark = f.readlines()
+    with open(template_fp) as f:
+        template = f.readlines()
+
+    # loop over all foliation data points
+    for i, row in geo_data.foliations.iterrows():
+        x, y = utm_to_latlong(row["X"], row["Y"])
+        placemark[3 - 1] = "<longitude>" + str(x) + "</longitude>\n"
+        placemark[4 - 1] = "<latitude>" + str(y) + "</latitude>\n"
+        placemark[5 - 1] = "<altitude>" + str(row["Z"]) + "</altitude>\n"
+        placemark[12 - 1] = "<coordinates>" + str(x) + "," + str(y) + "," + str(row["Z"]) + "</coordinates>\n"
+
+        heading = row["azimuth"]
+        if heading + 180 > 360:
+            heading -= 180
+        else:
+            heading += 180
+
+        placemark[16 - 1] = "<heading>"+str(heading)+"</heading>"
+
+        template[-3:-3] = placemark
+
+    if ".kml" not in fp:
+        fp = fp.join(".kml")
+
+    with open(fp, 'w') as file:
+        file.write("".join(template))
+
