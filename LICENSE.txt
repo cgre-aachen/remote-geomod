@@ -1,4 +1,4 @@
-GemPy is licensed under the GNU GENERAL PUBLIC LICENSE
+Remote-geomod is licensed under the GNU GENERAL PUBLIC LICENSE
 
 Copyright (c) 2017 cgre-aachen group
 
