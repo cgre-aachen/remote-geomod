@@ -212,6 +212,16 @@ class PointSet(object):
         # ax.rake(strike, dip, -25)
         ax.grid()
 
+    def minmax(self):
+        """Get minimum and maximum values of points in point set (e.g. to determine surrounding box)"""
+        point_array = np.empty((len(self.points), 2))
+
+        for i, p in enumerate(self.points):
+            point_array[i] = (p.x, p.y)
+
+        self.min = np.min(point_array, axis=0)
+        self.max = np.max(point_array, axis=0)
+
 
 #
 #   NOTE: code for plane is somewhat deprecated - plane fit is based on z=f(x,y) assumption
