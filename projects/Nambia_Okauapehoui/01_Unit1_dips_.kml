@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Dips.kml</name>
+	<Style id="sh_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0701fc</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0701fc</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>Dips</name>
+		<Placemark>
+			<name>dip1</name>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.96022318945617,-17.57843373464934,0 13.95866367246154,-17.57885337990605,0 13.95754076922679,-17.57769889340356,0 13.95917495850652,-17.57797219366158,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>dip2</name>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.95830670112753,-17.57283103802253,0 13.95661369094924,-17.5702043417511,0 13.95874802801321,-17.57089532536063,0 13.96072061275699,-17.57265588537602,0 13.96006370042178,-17.57309784290857,0 13.95919940480573,-17.57348404765043,0 13.95871533918178,-17.5719965094284,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>dip3</name>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.95027550921592,-17.56764218078703,0 13.94931391798866,-17.56667215866903,0 13.94861936432364,-17.56523316312302,0 13.9503890149224,-17.56588436581363,0 13.95204441030289,-17.5668734510453,0 13.95344337065032,-17.56805926329359,0 13.95275503761423,-17.5681793749758,0 13.9517762162277,-17.56854657900769,0 13.95083560609636,-17.56737510933873,0 13.95007202928392,-17.56661382602626,0 13.95161602244001,-17.56743893863428,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>dip4</name>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.93910862010814,-17.57100304849297,0 13.9382450309167,-17.5715420021841,0 13.93816931950686,-17.57078310753526,0 13.93713001746601,-17.57100780342968,0 13.93692579325915,-17.57053945969385,0 13.93603885749945,-17.57046739566386,0 13.93581142588345,-17.57003359754651,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>dip5</name>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.93772293556469,-17.55870009003679,0 13.93872681382789,-17.5581214151217,0 13.9397742612043,-17.55833938546359,0 13.94029234721348,-17.55921717133367,0 13.93997424735266,-17.56011591568828,0 13.93937205777924,-17.56089075553043,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>dip6</name>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.91617565421299,-17.55618474310798,0 13.91555514283733,-17.55726870129376,0 13.91540855455288,-17.55813409678293,0 13.91570859024629,-17.55890514576933,0 13.91642570566514,-17.55961756312267,0 13.91789126543262,-17.56013761726831,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>dip7</name>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.89581677452576,-17.54293502068099,0 13.89421311981833,-17.54376184166074,0 13.89396744990262,-17.54470601051673,0 13.8944622837426,-17.54568169985845,0 13.8958995433845,-17.54635455005521,0 13.897760785712,-17.54634611834036,0 13.89852103915277,-17.54573640065623,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>dip8</name>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.9489532355335,-17.54900460548183,0 13.95194283390158,-17.54848706578503,0 13.95329872625446,-17.54758140054862,0 13.95351994037462,-17.54583228796463,0 13.95162565205549,-17.543980149057,0 13.94643164760414,-17.54053633429639,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

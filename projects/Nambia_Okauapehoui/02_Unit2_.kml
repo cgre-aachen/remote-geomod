@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>02_Unit2.kml</name>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>Unit2</name>
+		<open>1</open>
+		<Placemark>
+			<name>02_Unit_2</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.94991625643676,-17.57762358931221,0 13.95633340635734,-17.5806933743857,0 13.9635499056757,-17.58109710922014,0 13.93395517467976,-17.57171888251126,0 13.92895662927076,-17.56969613202105,0 13.92297830820223,-17.56702208963863,0 13.91632923868214,-17.56402192675877,0 13.91137405158775,-17.56196462045912,0 13.90450596791471,-17.55662979852833,0 13.90186242081242,-17.55276191579093,0 13.90014805250039,-17.54841189481192,0 13.89503342414385,-17.54602499888808,0 13.89420722327887,-17.54489656066541,0 13.89522238182256,-17.54342457677503,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>02_Unit_2b</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.96487911068654,-17.57427305246824,0 13.96049950680327,-17.57030777236023,0 13.95373146840075,-17.56607326499371,0 13.94490284824451,-17.56054593312006,0 13.94101222885853,-17.55463790850331,0 13.9366433173836,-17.54968628204897,0 13.94170849787857,-17.54884432594253,0 13.94487633912705,-17.54708738095245,0 13.94974174555857,-17.54748349232326,0 13.95103101820204,-17.54580312447309,0 13.94691992403792,-17.54257972167959,0 13.93999966117365,-17.53996748747812,0 13.93192287423547,-17.53639044946772,0 13.92479572310278,-17.53407301398142,0 13.91659228584809,-17.53185608072113,0 13.91307477180773,-17.53100377030252,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
