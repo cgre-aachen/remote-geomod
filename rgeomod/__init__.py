@@ -10,6 +10,8 @@ from tqdm import tqdm
 from time import sleep
 from matplotlib.patches import FancyArrowPatch
 from mpl_toolkits.mplot3d import proj3d
+from osgeo import ogr, osr
+import gdal
 
 # TODO: we should rework the storage of xyz coordinates from single .x, .y, .z class-variables to np.ndarray
 
@@ -256,6 +258,73 @@ def convert_to_df(ks, ks_names, filenames, ks_bool):
     return interfaces, foliations
 
 
+def convert_dtm_to_gempy_grid(raster, dtm):
+    # here are the raster dimensions:
+    # raster.RasterXSize, raster.RasterYSize
+    geoinformation = raster.GetGeoTransform()
+    # get DTM corners:
+    dtm_E_min = geoinformation[0]
+    dtm_E_max = geoinformation[0] + geoinformation[1] * raster.RasterXSize
+    dtm_N_min = geoinformation[3] + geoinformation[5] * raster.RasterYSize
+    dtm_N_max = geoinformation[3]
+    # dtm_E_min, dtm_E_max, dtm_N_min, dtm_N_max
+
+    # define range for x, y - values
+    X_range = np.arange(dtm_E_min, dtm_E_max, geoinformation[1])
+    Y_range = np.arange(dtm_N_min, dtm_N_max, np.abs(geoinformation[5]))
+    XX, YY = np.meshgrid(X_range, Y_range, indexing="ij")
+
+    # Create list of input points for interpolation with gempy:
+    return np.array(list(zip(XX.ravel(), YY.ravel(), dtm[::-1,:].T.ravel())))
+
+
+def export_geotiff(path, geo_map, cmap, geotiff_filepath):
+    """
+
+    Args:
+        path (str): Filepath for the exported geotiff, must end in .tif
+        geo_map (np.ndarray): 2-D array containing the geological map
+        cmap (matplotlib colormap): The colormap to be used for the export
+        geotiff_filepath (str): Filepath of the template geotiff
+
+    Returns:
+        Saves the geological map as a geotiff to the given path.
+    """
+
+    # **********************************************************************
+    geo_map_rgb = cmap(geo_map)  # r,g,b,alpha
+    # **********************************************************************
+    # gdal.UseExceptions()
+
+    ds = gdal.Open(geotiff_filepath)
+    band = ds.GetRasterBand(1)
+    arr = band.ReadAsArray()
+    [cols, rows] = arr.shape
+
+    outFileName = path
+    driver = gdal.GetDriverByName("GTiff")
+    options = ['PROFILE=GeoTiff', 'PHOTOMETRIC=RGB', 'COMPRESS=JPEG']
+    outdata = driver.Create(outFileName, rows, cols, 3, gdal.GDT_Byte, options=options)
+
+    outdata.SetGeoTransform(ds.GetGeoTransform())  # sets same geotransform as input
+    outdata.SetProjection(ds.GetProjection())  # sets same projection as input
+    outdata.GetRasterBand(1).WriteArray(geo_map_rgb[:, ::-1, 0].T * 256)
+    outdata.GetRasterBand(2).WriteArray(geo_map_rgb[:, ::-1, 1].T * 256)
+    outdata.GetRasterBand(3).WriteArray(geo_map_rgb[:, ::-1, 2].T * 256)
+    outdata.GetRasterBand(1).SetColorInterpretation(gdal.GCI_RedBand)
+    outdata.GetRasterBand(2).SetColorInterpretation(gdal.GCI_GreenBand)
+    outdata.GetRasterBand(3).SetColorInterpretation(gdal.GCI_BlueBand)
+    # outdata.GetRasterBand(4).SetColorInterpretation(gdal.GCI_AlphaBand)  # alpha band
+
+    # outdata.GetRasterBand(1).SetNoDataValue(999)##if you want these values transparent
+    outdata.FlushCache()  # saves to disk
+    outdata = None  # closes file (important)
+    band = None
+    ds = None
+
+    print("Successfully exported geological map to "+path)
+
+
 def calculate_gradient(foliations):
     """
     Calculate the gradient vector of module 1 given dip and azimuth to be able to plot the foliations
@@ -284,3 +353,162 @@ class Arrow3D(FancyArrowPatch):
         xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, renderer.M)
         self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
         FancyArrowPatch.draw(self, renderer)
+
+
+def export_point(kmlpoints_list, template_fp, placemark_template_fp, filepath, filename):
+    with open(placemark_template_fp) as f:
+        placemark_template = f.readlines()
+
+    for i, kmlp in enumerate(kmlpoints_list):
+        with open(template_fp) as f:
+            template = f.readlines()
+
+        for ps in kmlp.point_sets:
+
+            for p in ps.points:
+                p.utm_to_latlong()
+
+                # write coordinates
+                placemark_template[5 - 1] = "<longitude>" + str(p.x) + "</longitude>\n"
+                placemark_template[6 - 1] = "<latitude>" + str(p.y) + "</latitude>\n"
+                placemark_template[7 - 1] = "<altitude>" + str(p.z) + "</altitude>\n"
+
+                placemark_template[14 - 1] = "<coordinates>" + str(p.x) + "," + str(p.y) + "," + str(
+                    p.z) + "</coordinates>\n"
+
+                # append placemark to template
+                template[-3:-3] = placemark_template
+
+        with open(filepath+str(i)+"_"+filename+".kml", 'w') as file:
+            file.write("".join(template))
+
+
+def plot_input_data_3d_scatter(interfaces, foliations):
+    # **********************************************************************
+    fig = plt.figure(figsize=(10, 8))
+    ax = fig.add_subplot(111, projection='3d')
+    # **********************************************************************
+    for fmt in interfaces["formation"].unique():  # loop over all unique formations
+        interf = interfaces[interfaces["formation"] == fmt]  # select only current formation
+        ax.scatter(interf["X"], interf["Y"], interf["Z"], alpha=0.85, s=35,
+                   label=fmt)  # plot points of current formation
+
+    # plot foliation data
+    ax.scatter(foliations["X"], foliations["Y"], foliations["Z"], color="black", alpha=0.85, s=35,
+               label="Foliation data")
+
+    calculate_gradient(foliations)
+
+    # **********************************************************************
+    # The following code will add arrows to indicate the foliation values
+    # **********************************************************************
+
+    # get extent of plot to adjust vectors:
+    ext_x, ext_y, ext_z = np.diff(ax.get_xlim3d()), np.diff(ax.get_ylim3d()), np.diff(ax.get_zlim3d())
+    m = 1000
+
+    # plot and arrow for each foliation value in the DataFrame
+    for i, row in foliations.iterrows():
+        a = Arrow3D([row["X"], row["X"] + row["G_x"] * m],
+                            [row["Y"], row["Y"] + row["G_y"] * m * ext_y / ext_x],
+                            [row["Z"], row["Z"] + row["G_z"] * m * ext_z / ext_x], mutation_scale=20,
+                            lw=1, arrowstyle="-|>", color="k"
+                            )
+        ax.add_artist(a)  # add the arrow artist to the subplot axes
+
+    # **********************************************************************
+    # add plot legend and  labels
+    ax.legend()
+    ax.set_xlabel("X")
+    ax.set_ylabel("Y")
+    ax.set_zlabel("Z")
+    fig.suptitle("GoogleEarth picks");
+    # **********************************************************************
+    return ax
+
+
+def clamp(x):
+    return int(max(0, min(x, 255)))
+
+
+def utm_to_latlong(x, y, zone=40):
+    wgs = osr.SpatialReference()
+    wgs.ImportFromEPSG(4326)
+    if zone == 40:
+        utm = osr.SpatialReference()
+        utm.ImportFromEPSG(32640)
+    else:
+        raise AttributeError("Sorry, zone %d not yet implemented (check EPSG code and include in code!)" % zone)
+
+    ct = osr.CoordinateTransformation(utm, wgs)
+    x, y = ct.TransformPoint(x, y)[:2]
+    return x, y
+
+
+def gempy_export_points_to_kml(fp, geo_data, placemark_template_fp, template_fp, cmap):
+    with open(placemark_template_fp) as f:
+        placemark_template = f.readlines()
+
+    formations = geo_data.get_formations()
+
+    for fmt in formations:  # loop over all formations to create a file for each
+        with open(template_fp) as f:  # start with a new template for each file
+            template = f.readlines()
+
+        f = geo_data.interfaces["formation"] == fmt  # filter
+
+        # set colors
+        rgb_c = np.array(cmap(np.unique(geo_data.interfaces[f]["formation number"]), bytes=True)[0])[:-1]
+        hex_c = "ff{0:02x}{1:02x}{2:02x}".format(clamp(rgb_c[2]), clamp(rgb_c[1]), clamp(rgb_c[0]))
+        template[17 - 1] = "<color>" + hex_c + "</color>\n"
+        template[28 - 1] = "<color>" + hex_c + "</color>\n"
+
+        for i, row in geo_data.interfaces[f].iterrows():
+            x, y = utm_to_latlong(row["X"], row["Y"])
+            placemark_template[3 - 1] = "<longitude>" + str(x) + "</longitude>\n"
+            placemark_template[4 - 1] = "<latitude>" + str(y) + "</latitude>\n"
+            placemark_template[5 - 1] = "<altitude>" + str(row["Z"]) + "</altitude>\n"
+
+            placemark_template[12 - 1] = "<coordinates>" + str(x) + "," + str(y) + "," + str(
+                row["Z"]) + "</coordinates>\n"
+            placemark_template[14 - 1] = "</Placemark>\n"
+            # append placemark to template
+            template[-3:-3] = placemark_template
+
+        with open(fp + fmt + ".kml", 'w') as file:
+            file.write("".join(template))
+
+
+def gempy_export_fol_to_kml(fp, geo_data,
+                            placemark_template_fp,
+                            template_fp):
+
+    with open(placemark_template_fp) as f:
+        placemark = f.readlines()
+    with open(template_fp) as f:
+        template = f.readlines()
+
+    # loop over all foliation data points
+    for i, row in geo_data.foliations.iterrows():
+        x, y = utm_to_latlong(row["X"], row["Y"])
+        placemark[3 - 1] = "<longitude>" + str(x) + "</longitude>\n"
+        placemark[4 - 1] = "<latitude>" + str(y) + "</latitude>\n"
+        placemark[5 - 1] = "<altitude>" + str(row["Z"]) + "</altitude>\n"
+        placemark[12 - 1] = "<coordinates>" + str(x) + "," + str(y) + "," + str(row["Z"]) + "</coordinates>\n"
+
+        heading = row["azimuth"]
+        if heading + 180 > 360:
+            heading -= 180
+        else:
+            heading += 180
+
+        placemark[16 - 1] = "<heading>"+str(heading)+"</heading>"
+
+        template[-3:-3] = placemark
+
+    if ".kml" not in fp:
+        fp = fp.join(".kml")
+
+    with open(fp, 'w') as file:
+        file.write("".join(template))
+

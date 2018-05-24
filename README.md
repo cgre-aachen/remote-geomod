@@ -9,6 +9,8 @@ in GemPy.
 
 ## Example
 
+The best way to get started is actually to go through the example in the book chapter - this is currently in review and more information will (hopefully) be provided here, soon!
+
 ## Installation
 
 Next to remote-geomod, you will require two additional major software components: (1) 
@@ -105,7 +107,7 @@ A good way to get started is to follow the steps in the publication (see below) 
 
 ## References
 
-Wellmann, F., A. Schaaf and C. von Hagke: "From GoogleEarth to 3-D Geology Problem 2: Seeing below the surface of the Digital Earth". In preparation for "Structural Geology and Tectonics: Problems and Solutions".
+Wellmann, F., A. Schaaf and C. von Hagke: "From GoogleEarth to 3-D Geology Problem 2: Seeing below the surface of the Digital Earth". Submitted as book chapter for "Structural Geology and Tectonics: Problems and Solutions".
 
 ## Contact
 

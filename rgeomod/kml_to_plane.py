@@ -45,11 +45,18 @@ class Point(object):
 
     def latlong_to_utm(self):
         """Convert point from lat long to utm for given zone"""
+        if self.type == 'utm':
+            # Points already in utm coordinates, nothing to do...
+            return
         wgs = osr.SpatialReference()
         wgs.ImportFromEPSG(4326)
         if self.zone == 40:
             utm = osr.SpatialReference()
             utm.ImportFromEPSG(32640)
+        elif self.zone == 33:
+            # !!! NOTE: this is 33S (for Namibia example)!
+            utm = osr.SpatialReference()
+            utm.ImportFromEPSG(32733)
         else:
             raise AttributeError("Sorry, zone %d not yet implemented\
              (to fix: check EPSG code on http://spatialreference.org/ref/epsg/ and include in code!)" % self.zone)
@@ -59,6 +66,9 @@ class Point(object):
 
     def utm_to_latlong(self):
         """Convert point from utm to lat long for given zone"""
+        if self.type == 'latlong':
+            # Points already in latlong coordinates, nothing to do...
+            return
         wgs = osr.SpatialReference()
         wgs.ImportFromEPSG(4326)
         if self.zone == 40:
@@ -211,6 +221,16 @@ class PointSet(object):
 
         # ax.rake(strike, dip, -25)
         ax.grid()
+
+    def minmax(self):
+        """Get minimum and maximum values of points in point set (e.g. to determine surrounding box)"""
+        point_array = np.empty((len(self.points), 2))
+
+        for i, p in enumerate(self.points):
+            point_array[i] = (p.x, p.y)
+
+        self.min = np.min(point_array, axis=0)
+        self.max = np.max(point_array, axis=0)
 
 
 #

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>01_Unit1.kml</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff06ff21</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff06ff21</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff06ff21</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff06ff21</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>01_Unit1</name>
+		<open>1</open>
+		<Placemark>
+			<name>01_Unit_1</name>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.88951683375006,-17.54457154662063,0 13.89357360718262,-17.54864923724061,0 13.90176724145867,-17.55629100622065,0 13.90728941571124,-17.56093447876892,0 13.91395748203178,-17.56467026774839,0 13.92096638173652,-17.56756697833183,0 13.92506215415125,-17.56948542295181,0 13.93832109214288,-17.57517482555531,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>01_Unit1b</name>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.9665057934419,-17.57462277898138,0 13.96512694189038,-17.5729392752924,0 13.96300089007864,-17.57083997076687,0 13.96010094555996,-17.56852604454403,0 13.95725591029442,-17.56670783696747,0 13.95365182041848,-17.56449129659108,0 13.95084150890578,-17.56224986945357,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>01_Unit1c</name>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					13.94382914826526,-17.54904761900966,0 13.9467821847307,-17.54775208963107,0 13.95045802203372,-17.54835843408116,0 13.95236042242976,-17.54685168237294,0 13.95121831374407,-17.54424234164477,0 13.94873145095979,-17.54285489554714,0 13.94620943773903,-17.54092154581847,0 13.94296503401539,-17.53933157869321,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
