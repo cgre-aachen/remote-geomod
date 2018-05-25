@@ -27,44 +27,48 @@ of installing the dependecies:
 ### Installation using Anaconda
 
 As a first step you need to download the Anaconda Python Distribution on your system. Make sure to select the correct 
-Python 3.6 version for your operating system and install it\footnote{A comprehensive user guide with installation 
-instructions can be found on the [Conda Documentation website](https://conda.io/docs/user-guide/install/). The next 
-step is to either download and unpack the remote-geomod repository, or to directly clone it into the current repository
- of your command-line window:
+Python 3.6 version for your operating system and install it (a comprehensive user guide with installation 
+instructions can be found on the [Conda Documentation website](https://conda.io/docs/user-guide/install/)).
+ 
+The next step is to either download and unpack the remote-geomod repository, or to directly clone it using your 
+command-line tool of choice:
  
     git clone https://github.com/cgre-aachen/remote-geomod.git
 
 Once you have a local copy of the repository on your computer, you have to create a new Conda environment. You can 
-either do this using the Anaconda Navigator or your command line tool. For the former option start the Anaconda 
-Navigator, select ``Environments`` in the navigation bar on the left-hand side, then click ``Import`` at the bottom 
-of the window and browse for the ``environment.yml`` file located in the remote-geomod folder and give the 
-environment the same name. This will create a separate Conda environment and install all necessary dependencies
- automatically. Once the installation finished, make sure you have selected the newly created environment.
+either do this using your command-line tool (1) or the Anaconda Navigator (2): 
+
+1. Open your command-line tool in the downloaded or cloned remote-geomod folder and run 
+``conda create env -n rgeomod -f environment.yml``. Afterwards you can activate the environment with the command 
+``activate rgeomod`` (Windows) or ``source activate rgeomod`` (macOS, Linux) or in your Anaconda Navigator.
+2. For the latter option start the Anaconda Navigator, select ``Environments`` in the navigation bar on the left-hand 
+side, then click ``Import`` at the bottom of the window and browse for the ``environment.yml`` file located in the 
+remote-geomod folder and give the environment the same name. This will create a separate Conda environment and install 
+all necessary dependencies automatically. Once the installation finished, make sure you have selected the newly 
+created environment.
 
 ### Dependencies
 
 remote-geomod uses Python 3 and has several dependencies for numerical operations, geographical data operations, 
-geological modeling and visualization. The following dependencies can also be found in the `environment.yml` file:
-
-**Provided via Anaconda:**
+geological modeling and visualization. All dependencies can be found in the  `environment.yml` file:
 
 ````
+dependencies:
+  - python=3.6
   - numpy
   - conda-forge::gdal
   - clinicalgraphics::vtk
   - theano
   - jupyter
+  - nb_conda
   - matplotlib
   - pandas
   - seaborn
   - scikit-image
   - tqdm
-````
-**Provided via PyPi:**
-
-````
-  - mplstereonet
-  - gempy
+  - pip:
+    - mplstereonet
+    - gempy
 ````
 
 We also provide precompiled Docker images hosted on Docker Hub with all necessary dependencies to get remote-geomod up
