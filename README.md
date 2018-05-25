@@ -58,7 +58,7 @@ dependencies:
   - numpy
   - conda-forge::gdal
   - clinicalgraphics::vtk
-  - theano
+  - theano=1.0.1
   - jupyter
   - nb_conda
   - matplotlib
