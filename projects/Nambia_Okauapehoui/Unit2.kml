@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+    <name></name>
+    <StyleMap id="default">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#default0</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#hl</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="hl">
+        <IconStyle>
+<color>ffc06b5c</color>
+            <scale>1.4</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+            </Icon>
+        </IconStyle>
+        <ListStyle>
+        </ListStyle>
+    </Style>
+    <Style id="default0">
+        <IconStyle>
+<color>ffc06b5c</color>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+            </Icon>
+        </IconStyle>
+        <ListStyle>
+        </ListStyle>
+    </Style>
+<Placemark>
+	<LookAt>
+<longitude>53.66447411727119</longitude>
+<latitude>72.57561475612643</latitude>
+<altitude>1360.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.66447411727119,72.57561475612643,1360.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.66157225353132</longitude>
+<latitude>72.60717950095699</latitude>
+<altitude>1499.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.66157225353132,72.60717950095699,1499.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.625353979871434</longitude>
+<latitude>72.61231157148877</latitude>
+<altitude>1404.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.625353979871434,72.61231157148877,1404.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.65781957466046</longitude>
+<latitude>72.60544108983713</latitude>
+<altitude>1500.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.65781957466046,72.60544108983713,1500.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.64229308429895</longitude>
+<latitude>72.60554944002953</latitude>
+<altitude>1489.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.64229308429895,72.60554944002953,1489.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.616690411129476</longitude>
+<latitude>72.60249369846377</latitude>
+<altitude>1456.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.616690411129476,72.60249369846377,1456.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.54932205002404</longitude>
+<latitude>72.61894984554598</latitude>
+<altitude>1367.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.54932205002404,72.61894984554598,1367.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.53796812732503</longitude>
+<latitude>72.6195817923269</latitude>
+<altitude>1382.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.53796812732503,72.6195817923269,1382.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.575845494474244</longitude>
+<latitude>72.61724642797215</latitude>
+<altitude>1370.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.575845494474244,72.61724642797215,1370.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.598965326024356</longitude>
+<latitude>72.61537598068412</latitude>
+<altitude>1381.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.598965326024356,72.61537598068412,1381.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.647864028181615</longitude>
+<latitude>72.61013096119127</latitude>
+<altitude>1473.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.647864028181615,72.61013096119127,1473.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.68542632805942</longitude>
+<latitude>72.57294732980554</latitude>
+<altitude>1392.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.68542632805942,72.57294732980554,1392.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.708372527774664</longitude>
+<latitude>72.57296265579471</latitude>
+<altitude>1310.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.708372527774664,72.57296265579471,1310.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.61268617741721</longitude>
+<latitude>72.58052575950494</latitude>
+<altitude>1415.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.61268617741721,72.58052575950494,1415.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.596425474101096</longitude>
+<latitude>72.58223252256182</latitude>
+<altitude>1417.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.596425474101096,72.58223252256182,1417.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.57692013411913</longitude>
+<latitude>72.58452414349094</latitude>
+<altitude>1456.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.57692013411913,72.58452414349094,1456.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.55521446040947</longitude>
+<latitude>72.5870962594181</latitude>
+<altitude>1494.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.55521446040947,72.5870962594181,1494.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.539071411860824</longitude>
+<latitude>72.58883470750594</latitude>
+<altitude>1523.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.539071411860824,72.58883470750594,1523.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.516166325614996</longitude>
+<latitude>72.59369979057297</latitude>
+<altitude>1503.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.516166325614996,72.59369979057297,1503.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.50696213274316</longitude>
+<latitude>72.59736750357396</latitude>
+<altitude>1472.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.50696213274316,72.59736750357396,1472.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.50060005533005</longitude>
+<latitude>72.60156857160578</latitude>
+<altitude>1433.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.50060005533005,72.60156857160578,1433.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.48386057103725</longitude>
+<latitude>72.60361862172256</latitude>
+<altitude>1425.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.48386057103725,72.60361862172256,1425.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.48099755307522</longitude>
+<latitude>72.60468486515555</latitude>
+<altitude>1417.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.48099755307522,72.60468486515555,1417.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.48390563633315</longitude>
+<latitude>72.60620388282504</latitude>
+<altitude>1405.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.48390563633315,72.60620388282504,1405.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.711224756977835</longitude>
+<latitude>72.57979449569001</latitude>
+<altitude>1399.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.711224756977835,72.57979449569001,1399.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.69654850747888</longitude>
+<latitude>72.5834686920703</latitude>
+<altitude>1451.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.69654850747888,72.5834686920703,1451.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.67423727466684</longitude>
+<latitude>72.58727008612209</latitude>
+<altitude>1465.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.67423727466684,72.58727008612209,1465.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.64511687463602</longitude>
+<latitude>72.5922282943193</latitude>
+<altitude>1422.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.64511687463602,72.5922282943193,1422.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.63156921028027</longitude>
+<latitude>72.59784894371923</latitude>
+<altitude>1475.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.63156921028027,72.59784894371923,1475.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>53.632595390917295</longitude>
+<latitude>72.60362479186942</latitude>
+<altitude>1503.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>53.632595390917295,72.60362479186942,1503.0</coordinates>
+	</Point>
+</Placemark>
+
+</Document>
+</kml>
