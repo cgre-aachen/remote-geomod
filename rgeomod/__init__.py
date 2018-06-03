@@ -489,7 +489,7 @@ def gempy_export_fol_to_kml(fp, geo_data,
         template = f.readlines()
 
     # loop over all foliation data points
-    for i, row in geo_data.foliations.iterrows():
+    for i, row in geo_data.orientations.iterrows():
         x, y = utm_to_latlong(row["X"], row["Y"])
         placemark[3 - 1] = "<longitude>" + str(x) + "</longitude>\n"
         placemark[4 - 1] = "<latitude>" + str(y) + "</latitude>\n"
