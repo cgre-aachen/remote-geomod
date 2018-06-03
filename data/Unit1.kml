@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+    <name></name>
+    <StyleMap id="default">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#default0</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#hl</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="hl">
+        <IconStyle>
+<color>ff6abb66</color>
+            <scale>1.4</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+            </Icon>
+        </IconStyle>
+        <ListStyle>
+        </ListStyle>
+    </Style>
+    <Style id="default0">
+        <IconStyle>
+<color>ff6abb66</color>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+            </Icon>
+        </IconStyle>
+        <ListStyle>
+        </ListStyle>
+    </Style>
+<Placemark>
+	<LookAt>
+<longitude>58.14050729074873</longitude>
+<latitude>22.396431418842187</latitude>
+<altitude>478.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.14050729074873,22.396431418842187,478.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>58.14267236257228</longitude>
+<latitude>22.394294296759142</latitude>
+<altitude>531.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.14267236257228,22.394294296759142,531.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>58.14431928430432</longitude>
+<latitude>22.392694280199873</latitude>
+<altitude>542.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.14431928430432,22.392694280199873,542.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>58.1394633594279</longitude>
+<latitude>22.391867894891213</latitude>
+<altitude>559.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.1394633594279,22.391867894891213,559.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>58.13703315695624</longitude>
+<latitude>22.39099052333879</latitude>
+<altitude>531.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.13703315695624,22.39099052333879,531.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>58.13761063285877</longitude>
+<latitude>22.395273679175958</latitude>
+<altitude>471.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.13761063285877,22.395273679175958,471.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>58.13443094812737</longitude>
+<latitude>22.391304632411856</latitude>
+<altitude>430.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.13443094812737,22.391304632411856,430.0</coordinates>
+	</Point>
+</Placemark>
+
+</Document>
+</kml>
