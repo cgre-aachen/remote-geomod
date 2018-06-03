@@ -526,3 +526,9 @@ figures/stereonet_plane_poles_and_circles.eps
 notebooks/03_geological_modeling_Lisa.ipynb
 figures/local
 notebooks/local
+
+results/*.kml
+results/*.csv
+results/*.tif
+results/*.pdf
+
