@@ -40,7 +40,7 @@ Once you have a local copy of the repository on your computer, you have to creat
 either do this using your command-line tool (1) or the Anaconda Navigator (2): 
 
 1. Open your command-line tool in the downloaded or cloned remote-geomod folder and run 
-``conda create env -n rgeomod -f environment.yml``. Afterwards you can activate the environment with the command 
+``conda env create -n rgeomod -f environment.yml``. Afterwards you can activate the environment with the command 
 ``activate rgeomod`` (Windows) or ``source activate rgeomod`` (macOS, Linux) or in your Anaconda Navigator.
 2. For the latter option start the Anaconda Navigator, select ``Environments`` in the navigation bar on the left-hand 
 side, then click ``Import`` at the bottom of the window and browse for the ``environment.yml`` file located in the 
