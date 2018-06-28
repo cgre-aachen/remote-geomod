@@ -7,7 +7,7 @@ dependencies:
   - jupyter
   - nb_conda
   - matplotlib
-  - pandas=0.20.1
+  - pandas
   - seaborn
   - scikit-image
   - tqdm
