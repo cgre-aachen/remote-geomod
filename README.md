@@ -1,6 +1,7 @@
 # remote-geomod
 
 ![Python 3](https://img.shields.io/badge/Python-3-blue.svg)
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
 > Coupling remote geological mapping in Google Earth with direct 3D geological modeling 
 in GemPy.

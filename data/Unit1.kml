@@ -14,7 +14,7 @@
     </StyleMap>
     <Style id="hl">
         <IconStyle>
-<color>ff1e6933</color>
+<color>ff6abb66</color>
             <scale>1.4</scale>
             <Icon>
                 <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
@@ -25,7 +25,7 @@
     </Style>
     <Style id="default0">
         <IconStyle>
-<color>ff1e6933</color>
+<color>ff6abb66</color>
             <scale>1.2</scale>
             <Icon>
                 <href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
@@ -34,34 +34,6 @@
         <ListStyle>
         </ListStyle>
     </Style>
-<Placemark>
-	<LookAt>
-<longitude>58.13443094812737</longitude>
-<latitude>22.391304632411856</latitude>
-<altitude>430.0</altitude>
-		<heading>2.7</heading>
-		<tilt>8.300000000000001</tilt>
-		<range>440.8</range>
-	</LookAt>
-	<styleUrl>#default</styleUrl>
-	<Point>
-<coordinates>58.13443094812737,22.391304632411856,430.0</coordinates>
-	</Point>
-</Placemark>
-<Placemark>
-	<LookAt>
-<longitude>58.13761063285877</longitude>
-<latitude>22.395273679175958</latitude>
-<altitude>471.0</altitude>
-		<heading>2.7</heading>
-		<tilt>8.300000000000001</tilt>
-		<range>440.8</range>
-	</LookAt>
-	<styleUrl>#default</styleUrl>
-	<Point>
-<coordinates>58.13761063285877,22.395273679175958,471.0</coordinates>
-	</Point>
-</Placemark>
 <Placemark>
 	<LookAt>
 <longitude>58.14050729074873</longitude>
@@ -121,7 +93,7 @@
 <Placemark>
 	<LookAt>
 <longitude>58.13703315695624</longitude>
-<latitude>22.390990523338793</latitude>
+<latitude>22.39099052333879</latitude>
 <altitude>531.0</altitude>
 		<heading>2.7</heading>
 		<tilt>8.300000000000001</tilt>
@@ -129,7 +101,35 @@
 	</LookAt>
 	<styleUrl>#default</styleUrl>
 	<Point>
-<coordinates>58.13703315695624,22.390990523338793,531.0</coordinates>
+<coordinates>58.13703315695624,22.39099052333879,531.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>58.13761063285877</longitude>
+<latitude>22.395273679175958</latitude>
+<altitude>471.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.13761063285877,22.395273679175958,471.0</coordinates>
+	</Point>
+</Placemark>
+<Placemark>
+	<LookAt>
+<longitude>58.13443094812737</longitude>
+<latitude>22.391304632411856</latitude>
+<altitude>430.0</altitude>
+		<heading>2.7</heading>
+		<tilt>8.300000000000001</tilt>
+		<range>440.8</range>
+	</LookAt>
+	<styleUrl>#default</styleUrl>
+	<Point>
+<coordinates>58.13443094812737,22.391304632411856,430.0</coordinates>
 	</Point>
 </Placemark>
 

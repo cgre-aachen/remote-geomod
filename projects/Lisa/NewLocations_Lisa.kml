@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>NewLocations_Lisa.kml</name>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>GoogleEarthProject</name>
+		<open>1</open>
+		<Placemark>
+			<name>Zagros Mountains, Iran</name>
+			<LookAt>
+				<longitude>52.92687365249353</longitude>
+				<latitude>28.7809973770645</latitude>
+				<altitude>0</altitude>
+				<heading>0.0001200911105612791</heading>
+				<tilt>0.1483454560991448</tilt>
+				<range>34189.87163026626</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>52.92687365249353,28.78099737706451,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Zagros Mountains2, Iran</name>
+			<LookAt>
+				<longitude>51.71179650208993</longitude>
+				<latitude>28.27788893937047</latitude>
+				<altitude>0</altitude>
+				<heading>-0.0008973926001468141</heading>
+				<tilt>0</tilt>
+				<range>37404.94798324926</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>51.71179650208993,28.27788893937047,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Zagros Mountains3, Iran</name>
+			<LookAt>
+				<longitude>55.72716867648416</longitude>
+				<latitude>27.33554606838784</latitude>
+				<altitude>0</altitude>
+				<heading>-14.78342111124426</heading>
+				<tilt>10.07908947666449</tilt>
+				<range>53041.81756513286</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>55.72716867648416,27.33554606838784,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pumamarca, Argentinien</name>
+			<LookAt>
+				<longitude>-65.49857936858851</longitude>
+				<latitude>-23.73982270280304</latitude>
+				<altitude>0</altitude>
+				<heading>14.4050203740627</heading>
+				<tilt>33.28897299042622</tilt>
+				<range>7125.487037458846</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-65.49857936858852,-23.73982270280304,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Tres Cruces, Argentinien</name>
+			<LookAt>
+				<longitude>-65.55201719520599</longitude>
+				<latitude>-22.89622460760241</latitude>
+				<altitude>0</altitude>
+				<heading>-1.092173852622439e-009</heading>
+				<tilt>0</tilt>
+				<range>13345.52295173853</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-65.55201719520599,-22.89622460760241,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Death Valley, California USA</name>
+			<Camera>
+				<longitude>-117.0536588240493</longitude>
+				<latitude>36.53028156230787</latitude>
+				<altitude>42994.60694873035</altitude>
+				<heading>-36.36023554611791</heading>
+				<tilt>0.186980509899835</tilt>
+				<roll>-9.405051680143052</roll>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</Camera>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-117.0545885148269,36.53129630728512,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Raplee Ridge, Utah USA</name>
+			<LookAt>
+				<longitude>-109.8190281116491</longitude>
+				<latitude>37.19006004172334</latitude>
+				<altitude>0</altitude>
+				<heading>-2.144329966242703e-010</heading>
+				<tilt>0</tilt>
+				<range>4736.237157542526</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-109.8190281116491,37.19006004172334,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Round Rock, Arizona, USA</name>
+			<Camera>
+				<longitude>-109.5861927582238</longitude>
+				<latitude>36.44504448025141</latitude>
+				<altitude>2183.880554362183</altitude>
+				<heading>12.97177959252565</heading>
+				<tilt>23.10417671303725</tilt>
+				<roll>-1.207202094174062</roll>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</Camera>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-109.5844718898218,36.45116264248597,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ayers Rock, Australia</name>
+			<LookAt>
+				<longitude>131.0368822006415</longitude>
+				<latitude>-25.34442770023263</latitude>
+				<altitude>0</altitude>
+				<heading>-2.745884175921305e-010</heading>
+				<tilt>0</tilt>
+				<range>4038.360310120592</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>131.0368822006415,-25.34442770023263,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Tirasberg, Namibia</name>
+			<LookAt>
+				<longitude>16.75098495522396</longitude>
+				<latitude>-26.15551544397123</latitude>
+				<altitude>0</altitude>
+				<heading>-1.725869952773241e-009</heading>
+				<tilt>0</tilt>
+				<range>7158.067160230779</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>16.75098495522396,-26.15551544397123,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cederberg,South Africa</name>
+			<LookAt>
+				<longitude>19.45958843887027</longitude>
+				<latitude>-32.58830051896525</latitude>
+				<altitude>0</altitude>
+				<heading>8.859344343073941</heading>
+				<tilt>23.71366597177049</tilt>
+				<range>86225.16148088053</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>19.46403561915518,-32.69547827887249,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

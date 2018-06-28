@@ -4,7 +4,7 @@
 <Placemark>
 	<LookAt>
 <longitude>58.175959710958246</longitude>
-<latitude>22.389592271982107</latitude>
+<latitude>22.389592271982092</latitude>
 <altitude>386.8181818181818</altitude>
 		<heading>2.7</heading>
 		<tilt>8.300000000000001</tilt>
@@ -12,11 +12,11 @@
 	</LookAt>
 	<styleUrl>#default</styleUrl>
 	<Point>
-<coordinates>58.175959710958246,22.389592271982107,386.8181818181818</coordinates>
+<coordinates>58.175959710958246,22.389592271982092,386.8181818181818</coordinates>
 	</Point>
 	<Style>
         <IconStyle>
-<heading>275.4151669611473</heading>            <Icon>
+<heading>275.4151669611472</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -36,7 +36,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>244.0930655817981</heading>            <Icon>
+<heading>244.09306558182257</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -56,7 +56,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>215.6315713979729</heading>            <Icon>
+<heading>215.6315713978265</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -76,7 +76,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>115.92786428283239</heading>            <Icon>
+<heading>115.92786428284734</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -104,7 +104,7 @@
 </Placemark><Placemark>
 	<LookAt>
 <longitude>58.11290166721616</longitude>
-<latitude>22.390418624619212</latitude>
+<latitude>22.39041862461921</latitude>
 <altitude>482.6</altitude>
 		<heading>2.7</heading>
 		<tilt>8.300000000000001</tilt>
@@ -112,11 +112,11 @@
 	</LookAt>
 	<styleUrl>#default</styleUrl>
 	<Point>
-<coordinates>58.11290166721616,22.390418624619212,482.6</coordinates>
+<coordinates>58.11290166721616,22.39041862461921,482.6</coordinates>
 	</Point>
 	<Style>
         <IconStyle>
-<heading>114.16281979663637</heading>            <Icon>
+<heading>114.1628197966453</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -156,7 +156,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>313.68626114846836</heading>            <Icon>
+<heading>313.68626114842635</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -176,7 +176,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>284.880962454668</heading>            <Icon>
+<heading>284.88096245466306</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -196,7 +196,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>167.39054976815896</heading>            <Icon>
+<heading>167.39054976816305</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -204,7 +204,7 @@
 </Placemark><Placemark>
 	<LookAt>
 <longitude>58.12794199308011</longitude>
-<latitude>22.399149242949484</latitude>
+<latitude>22.399149242949477</latitude>
 <altitude>625.3333333333334</altitude>
 		<heading>2.7</heading>
 		<tilt>8.300000000000001</tilt>
@@ -212,11 +212,11 @@
 	</LookAt>
 	<styleUrl>#default</styleUrl>
 	<Point>
-<coordinates>58.12794199308011,22.399149242949484,625.3333333333334</coordinates>
+<coordinates>58.12794199308011,22.399149242949477,625.3333333333334</coordinates>
 	</Point>
 	<Style>
         <IconStyle>
-<heading>126.49349066903693</heading>            <Icon>
+<heading>126.49349066903005</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -236,7 +236,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>169.88363037753595</heading>            <Icon>
+<heading>169.88363037758415</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -244,7 +244,7 @@
 </Placemark><Placemark>
 	<LookAt>
 <longitude>58.16282450010449</longitude>
-<latitude>22.412293359963844</latitude>
+<latitude>22.412293359963847</latitude>
 <altitude>469.375</altitude>
 		<heading>2.7</heading>
 		<tilt>8.300000000000001</tilt>
@@ -252,11 +252,11 @@
 	</LookAt>
 	<styleUrl>#default</styleUrl>
 	<Point>
-<coordinates>58.16282450010449,22.412293359963844,469.375</coordinates>
+<coordinates>58.16282450010449,22.412293359963847,469.375</coordinates>
 	</Point>
 	<Style>
         <IconStyle>
-<heading>223.52247494583196</heading>            <Icon>
+<heading>223.52247494584864</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -276,7 +276,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>233.59227014286688</heading>            <Icon>
+<heading>233.5922701428554</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>
@@ -316,7 +316,7 @@
 	</Point>
 	<Style>
         <IconStyle>
-<heading>297.2150198851067</heading>            <Icon>
+<heading>297.21501988510386</heading>            <Icon>
                 <href>https://raw.githubusercontent.com/cgre-aachen/remote-geomod/master/rgeomod/templates/dip.png</href>
             </Icon>
         </IconStyle>

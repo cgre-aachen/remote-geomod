@@ -518,3 +518,17 @@ fabric.properties
 # End of https://www.gitignore.io/api/macos,latex,linux,python,windows,jupyternotebook
 ~$pping with GoogleEarth.docx
 rgeomod/.idea
+data/FW1
+data/tmp
+*.afdesign
+figures/stereonet_plane_density_plot.eps
+figures/stereonet_plane_poles_and_circles.eps
+notebooks/03_geological_modeling_Lisa.ipynb
+figures/local
+notebooks/local
+
+results/*.kml
+results/*.csv
+results/*.tif
+results/*.pdf
+
